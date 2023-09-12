@@ -1,0 +1,41 @@
+Details about the Project :
+
+to Install the Required Packges run : requirements.txt from terminal. or run pip install
+
+1. run app.py to start the webservice
+2. There are three endpoints :
+    a. http://127.0.0.1:8080/   - Welcome Page
+    b. http://127.0.0.1:8080/api/v1/storecloudtagdata   - to save the data
+        Note: This requires Mongo DB to be installed in the local machine then only this endpoint will work.
+              Adding screen shots for the data stored in the mongo DB for reference with name :
+              CLASSTAGDATA.png and CLASSPREFIXDATA.png.
+              Also, Attaching csv file for the data stored in the two tables.
+
+    c. http://127.0.0.1:8080/api/v1/search-ipaddress  -- Search the IP Address.
+       input JSON for the API :
+       e.g : { "ip" : ["136.226.232.0/23"] }
+       e.g : { "ip": [ "140.248.64.0/18", "157.52.64.0/18", "23.235.32.0/20",  "167.82.128.0/20", "146.75.0.0/17",
+                "103.244.50.0/24", "167.82.0.0/17", "167.82.160.0/20", "185.31.16.0/22", "43.249.72.0/22",
+                "104.156.80.0/20", "103.245.222.0/23", "103.245.224.0/24", "167.82.224.0/20", "199.232.0.0/16",
+                "172.111.64.0/18", "199.27.72.0/21", "151.101.0.0/16", "140.248.128.0/17", "15.230.206.0/24",
+                "52.94.249.208/28", "52.95.192.0/20", "13.48.186.128/27", "52.93.153.171/32", "18.180.180.0/23",
+                "13.208.177.224/27", "3.70.195.64/26", "3.218.182.128/25", "13.56.32.200/29",  "13.34.63.64/27",
+                "13.208.33.24/29", "35.73.4.0/24", "52.93.178.132/32", "52.95.247.0/24",  "16.50.0.0/15",
+                "52.144.201.128/26", "150.222.120.62/31", "15.230.39.18/31",  "52.93.178.187/32",
+                "15.228.1.192/26", "3.101.202.0/23", "52.81.135.128/25", "223.71.71.128/25",  "3.239.152.12/31",
+                "172.96.98.0/24", "15.230.131.0/24", "13.34.45.64/27", "142.4.160.56/29", "3.25.37.128/25",
+                "3.99.194.0/23", "3.101.208.0/24", "15.230.74.128/26", "54.239.102.232/31", "99.82.174.0/24",
+                "15.185.0.0/16", "54.240.236.70/32", "52.93.124.96/32",  "13.124.145.120/29",  "52.144.216.6/31",
+                "57.180.0.0/14", "15.193.5.0/24", "54.242.0.0/15", "44.213.78.0/23", "34.242.153.224/28",
+                "15.230.138.0/24", "23.79.237.0/24", "23.79.232.0/24", "80.67.65.0/24", "72.247.151.0/24",
+                "184.51.33.0/24",  "2.22.227.0/24", "63.208.195.0/24", "2.22.60.0/24" ]
+}
+
+    d. http://127.0.0.1:8080/searchips   -- Search Ip Address.
+        Input same as above step (c)
+
+
+4. Performance Timing :
+    a. For one IP : Response time :     around 7-10 ms ( average)
+    a. For 10 IP : Response time :     around 30-40 ms ( average)
+    a. For 50 IP : Response time :     around 60-70 ms ( average)
